@@ -76,6 +76,13 @@ a { color: inherit; }
     max-width: 800px;
 }
 
+.hero__icon {
+    display: block;
+    width: clamp(120px, 17vw, 175px);
+    height: auto;
+    margin: 0 auto 1.5rem;
+}
+
 .hero__eyebrow {
     font-family: var(--serif);
     font-style: italic;
@@ -488,14 +495,25 @@ a { color: inherit; }
    ========================================================= */
 .iban {
     display: inline-block;
+    box-sizing: border-box;
+    max-width: 100%;
     margin-top: 1.5rem;
     padding: 1.25rem 2rem;
     font-family: var(--serif);
-    font-size: clamp(1.1rem, 2.5vw, 1.4rem);
-    letter-spacing: 0.15em;
+    font-size: clamp(1rem, 2.5vw, 1.4rem);
+    letter-spacing: 0.12em;
+    line-height: 1.9;
     background: var(--cream);
     border: 1px solid var(--sage-soft);
     color: var(--charcoal);
+    word-spacing: 0.4em;
+}
+@media (max-width: 480px) {
+    .iban {
+        padding: 1rem 1.25rem;
+        letter-spacing: 0.08em;
+        word-spacing: 0.3em;
+    }
 }
 
 /* =========================================================
